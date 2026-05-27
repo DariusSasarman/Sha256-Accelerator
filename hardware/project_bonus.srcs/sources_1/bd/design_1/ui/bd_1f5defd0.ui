@@ -1,0 +1,102 @@
+{
+   "ActiveEmotionalView":"Color Coded",
+   "Color Coded_ExpandedHierarchyInLayout":"",
+   "Color Coded_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port usb_uart -pg 1 -lvl 5 -x 1600 -y 320 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace inst sha256_encryptor_0 -pg 1 -lvl 3 -x 1100 -y 480 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1460 -y 450 -defaultsOSRD
+preplace inst microblaze_mcs_0 -pg 1 -lvl 2 -x 570 -y 280 -defaultsOSRD
+preplace inst lmb_bram_if_cntlr_0 -pg 1 -lvl 3 -x 1100 -y 160 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20} -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 570 -y 550 -defaultsOSRD
+preplace inst reset_inv_0 -pg 1 -lvl 1 -x 170 -y 350 -defaultsOSRD
+preplace netloc blk_mem_gen_0_doutb 1 2 2 910 600 1340J
+preplace netloc clk_wiz_clk_out1 1 2 1 900 260n
+preplace netloc lmb_bram_if_cntlr_0_Sl_DBus 1 2 1 860 140n
+preplace netloc lmb_bram_if_cntlr_0_Sl_Ready 1 2 1 870 180n
+preplace netloc microblaze_mcs_0_GPIO1_tri_o 1 2 1 850 380n
+preplace netloc microblaze_mcs_0_GPIO2_tri_o 1 2 1 810 420n
+preplace netloc microblaze_mcs_0_IO_addr_strobe 1 2 1 810 100n
+preplace netloc microblaze_mcs_0_IO_address 1 2 1 840 80n
+preplace netloc microblaze_mcs_0_IO_byte_enable 1 2 1 850 120n
+preplace netloc microblaze_mcs_0_IO_read_strobe 1 2 1 820 160n
+preplace netloc microblaze_mcs_0_IO_write_data 1 2 1 880 200n
+preplace netloc microblaze_mcs_0_IO_write_strobe 1 2 1 890 220n
+preplace netloc reset_1 1 0 2 20 290 NJ
+preplace netloc reset_inv_0_Res 1 1 2 320 80 830J
+preplace netloc sha256_encryptor_0_bram_addr_b 1 3 1 1300 420n
+preplace netloc sha256_encryptor_0_bram_clk_b 1 3 1 N 440
+preplace netloc sha256_encryptor_0_bram_en_b 1 3 1 1320 480n
+preplace netloc sha256_encryptor_0_bram_we_b 1 3 1 1310 500n
+preplace netloc sha256_encryptor_0_bram_wrdata_b 1 3 1 1330 460n
+preplace netloc sha256_encryptor_0_work_done 1 2 2 NJ 360 1290
+preplace netloc sys_clock_1 1 0 2 NJ 410 330
+preplace netloc lmb_bram_if_cntlr_0_BRAM_PORT 1 3 1 1300 160n
+preplace netloc microblaze_mcs_0_UART 1 2 3 NJ 320 NJ 320 NJ
+levelinfo -pg 1 0 170 570 1100 1460 1600
+pagesize -pg 1 -db -bbox -sgen -120 0 1710 620
+",
+   "Color Coded_PinnedPorts":"",
+   "Color Coded_ScaleFactor":"0.457143",
+   "Color Coded_TopLeft":"-112,-269",
+   "Default View_ScaleFactor":"0.454645",
+   "Default View_TopLeft":"-110,-330",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ScaleFactor":"0.501205",
+   "Grouping and No Loops_TopLeft":"-112,-289",
+   "Interfaces View_Layers":"/sys_clock_1:false|/clk_wiz_clk_out1:false|/reset_1:false|",
+   "Interfaces View_ScaleFactor":"0.86757",
+   "Interfaces View_TopLeft":"50,-224",
+   "No Loops_ScaleFactor":"0.501205",
+   "No Loops_TopLeft":"-112,-289",
+   "Reduced Jogs_Layers":"/sys_clock_1:true|/clk_wiz_clk_out1:true|/reset_1:true|",
+   "Reduced Jogs_ScaleFactor":"0.478161",
+   "Reduced Jogs_TopLeft":"-111,-303",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port usb_uart -pg 1 -lvl 5 -x 1610 -y 380 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 550 -defaultsOSRD
+preplace inst sha256_encryptor_0 -pg 1 -lvl 3 -x 1110 -y 540 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1470 -y 510 -defaultsOSRD
+preplace inst microblaze_mcs_0 -pg 1 -lvl 2 -x 570 -y 340 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 570 -y 620 -defaultsOSRD
+preplace inst reset_inv_0 -pg 1 -lvl 1 -x 170 -y 610 -defaultsOSRD
+preplace inst lmb_bram_if_cntlr_0 -pg 1 -lvl 3 -x 1110 -y 190 -defaultsOSRD
+preplace netloc sha256_encryptor_0_bram_clk_b 1 3 1 N 500
+preplace netloc sha256_encryptor_0_bram_addr_b 1 3 1 1310 480n
+preplace netloc sha256_encryptor_0_bram_en_b 1 3 1 1330 540n
+preplace netloc sha256_encryptor_0_bram_we_b 1 3 1 1320 560n
+preplace netloc sha256_encryptor_0_bram_wrdata_b 1 3 1 1340 520n
+preplace netloc blk_mem_gen_0_doutb 1 2 2 920 660 1350
+preplace netloc microblaze_mcs_0_GPIO1_tri_o 1 2 1 890 440n
+preplace netloc microblaze_mcs_0_GPIO2_tri_o 1 2 1 880 480n
+preplace netloc sha256_encryptor_0_work_done 1 2 2 NJ 420 1300
+preplace netloc sys_clock_1 1 0 3 NJ 330 320 540 900
+preplace netloc reset_1 1 0 3 20 550 330 550 870
+preplace netloc clk_wiz_clk_out1 1 2 1 910 510n
+preplace netloc reset_inv_0_Res 1 1 1 NJ 610
+preplace netloc microblaze_mcs_0_IO_byte_enable 1 2 1 830 120n
+preplace netloc microblaze_mcs_0_IO_addr_strobe 1 2 1 820 100n
+preplace netloc microblaze_mcs_0_IO_address 1 2 1 810 80n
+preplace netloc microblaze_mcs_0_IO_read_strobe 1 2 1 850 180n
+preplace netloc lmb_bram_if_cntlr_0_Sl_Ready 1 2 1 860 200n
+preplace netloc microblaze_mcs_0_IO_write_strobe 1 2 1 890 280n
+preplace netloc microblaze_mcs_0_IO_write_data 1 2 1 880 260n
+preplace netloc lmb_bram_if_cntlr_0_Sl_DBus 1 2 1 840 160n
+preplace netloc microblaze_mcs_0_UART 1 2 3 NJ 380 NJ 380 NJ
+preplace netloc lmb_bram_if_cntlr_0_BRAM_PORT 1 3 1 1310 190n
+levelinfo -pg 1 0 170 570 1110 1470 1610
+pagesize -pg 1 -db -bbox -sgen -110 0 1720 690
+"
+}
+{
+   "da_board_cnt":"32",
+   "da_bram_cntlr_cnt":"1",
+   "da_clkrst_cnt":"5"
+}

@@ -1,0 +1,493 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x91577990F2B4765F",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../project_bonus.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "pfm_name": "xilinx:nexys-a7-100t:name:0.0",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "sha256_encryptor_0": "",
+      "blk_mem_gen_0": "",
+      "microblaze_mcs_0": "",
+      "lmb_bram_if_cntlr_0": "",
+      "clk_wiz": "",
+      "reset_inv_0": ""
+    },
+    "interface_ports": {
+      "usb_uart": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0",
+        "hdl_attributes": {
+          "LOCKED": {
+            "value": "FALSE",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "RxD": {
+            "physical_name": "usb_uart_rxd",
+            "direction": "I"
+          },
+          "TxD": {
+            "physical_name": "usb_uart_txd",
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "ports": {
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      }
+    },
+    "components": {
+      "sha256_encryptor_0": {
+        "vlnv": "xilinx.com:module_ref:sha256_encryptor:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_sha256_encryptor_0_0",
+        "xci_path": "ip/design_1_sha256_encryptor_0_0/design_1_sha256_encryptor_0_0.xci",
+        "inst_hier_path": "sha256_encryptor_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sha256_encryptor",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "start": {
+            "direction": "I"
+          },
+          "work_done": {
+            "direction": "O"
+          },
+          "bram_clk_b": {
+            "direction": "O"
+          },
+          "bram_rst_b": {
+            "direction": "O"
+          },
+          "bram_en_b": {
+            "direction": "O"
+          },
+          "bram_we_b": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "bram_addr_b": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bram_wrdata_b": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "bram_rddata_b": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "12",
+        "xci_name": "design_1_blk_mem_gen_0_0",
+        "xci_path": "ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "microblaze_mcs_0": {
+        "vlnv": "xilinx.com:ip:microblaze_mcs:3.0",
+        "ip_revision": "27",
+        "xci_name": "design_1_microblaze_mcs_0_0",
+        "xci_path": "ip/design_1_microblaze_mcs_0_0/design_1_microblaze_mcs_0_0.xci",
+        "inst_hier_path": "microblaze_mcs_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLK_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "GPI1_SIZE": {
+            "value": "1"
+          },
+          "GPO1_SIZE": {
+            "value": "1"
+          },
+          "GPO2_SIZE": {
+            "value": "1"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "TRACE": {
+            "value": "0"
+          },
+          "UART_BAUDRATE": {
+            "value": "115200"
+          },
+          "UART_BOARD_INTERFACE": {
+            "value": "usb_uart"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_GPI1": {
+            "value": "1"
+          },
+          "USE_GPO1": {
+            "value": "1"
+          },
+          "USE_GPO2": {
+            "value": "1"
+          },
+          "USE_GPO3": {
+            "value": "0"
+          },
+          "USE_IO_BUS": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "IO": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:mcsio_bus:1.0",
+            "vlnv": "xilinx.com:interface:mcsio_bus_rtl:1.0"
+          },
+          "UART": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+            "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+          },
+          "GPIO1": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI1_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI1_SIZE": {
+                "value": "1"
+              },
+              "C_GPO1_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO1_SIZE": {
+                "value": "1"
+              },
+              "C_USE_GPI1": {
+                "value": "1"
+              },
+              "C_USE_GPO1": {
+                "value": "1"
+              }
+            }
+          },
+          "GPIO2": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+            "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+            "parameters": {
+              "C_GPI2_INTERRUPT": {
+                "value": "0"
+              },
+              "C_GPI2_SIZE": {
+                "value": "32"
+              },
+              "C_GPO2_INIT": {
+                "value": "0x00000000"
+              },
+              "C_GPO2_SIZE": {
+                "value": "1"
+              },
+              "C_USE_GPI2": {
+                "value": "0"
+              },
+              "C_USE_GPO2": {
+                "value": "1"
+              }
+            }
+          }
+        }
+      },
+      "lmb_bram_if_cntlr_0": {
+        "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
+        "ip_revision": "27",
+        "xci_name": "design_1_lmb_bram_if_cntlr_0_0",
+        "xci_path": "ip/design_1_lmb_bram_if_cntlr_0_0/design_1_lmb_bram_if_cntlr_0_0.xci",
+        "inst_hier_path": "lmb_bram_if_cntlr_0",
+        "has_run_ip_tcl": "true",
+        "interface_ports": {
+          "SLMB": {
+            "bd_attributes": {
+              "FUNCTION": {
+                "value": "BRAM_CTRL",
+                "value_src": "default"
+              }
+            }
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_clk_wiz_3",
+        "xci_path": "ip/design_1_clk_wiz_3/design_1_clk_wiz_3.xci",
+        "inst_hier_path": "clk_wiz",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100.0"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        },
+        "pfm_attributes": {
+          "CLOCK": "clk_out1 {id \"12\" is_default \"true\" proc_sys_reset \"\" status \"fixed\" freq_hz \"100000000\"}"
+        }
+      },
+      "reset_inv_0": {
+        "vlnv": "xilinx.com:inline_hdl:ilvector_logic:1.0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "lmb_bram_if_cntlr_0_BRAM_PORT": {
+        "interface_ports": [
+          "blk_mem_gen_0/BRAM_PORTA",
+          "lmb_bram_if_cntlr_0/BRAM_PORT"
+        ]
+      },
+      "microblaze_mcs_0_UART": {
+        "interface_ports": [
+          "usb_uart",
+          "microblaze_mcs_0/UART"
+        ]
+      }
+    },
+    "nets": {
+      "blk_mem_gen_0_doutb": {
+        "ports": [
+          "blk_mem_gen_0/doutb",
+          "sha256_encryptor_0/bram_rddata_b"
+        ]
+      },
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "lmb_bram_if_cntlr_0/LMB_Clk",
+          "sha256_encryptor_0/clk"
+        ]
+      },
+      "lmb_bram_if_cntlr_0_Sl_DBus": {
+        "ports": [
+          "lmb_bram_if_cntlr_0/Sl_DBus",
+          "microblaze_mcs_0/IO_read_data"
+        ]
+      },
+      "lmb_bram_if_cntlr_0_Sl_Ready": {
+        "ports": [
+          "lmb_bram_if_cntlr_0/Sl_Ready",
+          "microblaze_mcs_0/IO_ready"
+        ]
+      },
+      "microblaze_mcs_0_GPIO1_tri_o": {
+        "ports": [
+          "microblaze_mcs_0/GPIO1_tri_o",
+          "sha256_encryptor_0/rst"
+        ]
+      },
+      "microblaze_mcs_0_GPIO2_tri_o": {
+        "ports": [
+          "microblaze_mcs_0/GPIO2_tri_o",
+          "sha256_encryptor_0/start"
+        ]
+      },
+      "microblaze_mcs_0_IO_addr_strobe": {
+        "ports": [
+          "microblaze_mcs_0/IO_addr_strobe",
+          "lmb_bram_if_cntlr_0/LMB_AddrStrobe"
+        ]
+      },
+      "microblaze_mcs_0_IO_address": {
+        "ports": [
+          "microblaze_mcs_0/IO_address",
+          "lmb_bram_if_cntlr_0/LMB_ABus"
+        ]
+      },
+      "microblaze_mcs_0_IO_byte_enable": {
+        "ports": [
+          "microblaze_mcs_0/IO_byte_enable",
+          "lmb_bram_if_cntlr_0/LMB_BE"
+        ]
+      },
+      "microblaze_mcs_0_IO_read_strobe": {
+        "ports": [
+          "microblaze_mcs_0/IO_read_strobe",
+          "lmb_bram_if_cntlr_0/LMB_ReadStrobe"
+        ]
+      },
+      "microblaze_mcs_0_IO_write_data": {
+        "ports": [
+          "microblaze_mcs_0/IO_write_data",
+          "lmb_bram_if_cntlr_0/LMB_WriteDBus"
+        ]
+      },
+      "microblaze_mcs_0_IO_write_strobe": {
+        "ports": [
+          "microblaze_mcs_0/IO_write_strobe",
+          "lmb_bram_if_cntlr_0/LMB_WriteStrobe"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "microblaze_mcs_0/Reset",
+          "reset_inv_0/Op1"
+        ]
+      },
+      "reset_inv_0_Res": {
+        "ports": [
+          "reset_inv_0/Res",
+          "clk_wiz/reset",
+          "lmb_bram_if_cntlr_0/LMB_Rst"
+        ]
+      },
+      "sha256_encryptor_0_bram_addr_b": {
+        "ports": [
+          "sha256_encryptor_0/bram_addr_b",
+          "blk_mem_gen_0/addrb"
+        ]
+      },
+      "sha256_encryptor_0_bram_clk_b": {
+        "ports": [
+          "sha256_encryptor_0/bram_clk_b",
+          "blk_mem_gen_0/clkb"
+        ]
+      },
+      "sha256_encryptor_0_bram_en_b": {
+        "ports": [
+          "sha256_encryptor_0/bram_en_b",
+          "blk_mem_gen_0/enb"
+        ]
+      },
+      "sha256_encryptor_0_bram_we_b": {
+        "ports": [
+          "sha256_encryptor_0/bram_we_b",
+          "blk_mem_gen_0/web"
+        ]
+      },
+      "sha256_encryptor_0_bram_wrdata_b": {
+        "ports": [
+          "sha256_encryptor_0/bram_wrdata_b",
+          "blk_mem_gen_0/dinb"
+        ]
+      },
+      "sha256_encryptor_0_work_done": {
+        "ports": [
+          "sha256_encryptor_0/work_done",
+          "microblaze_mcs_0/GPIO1_tri_i"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz/clk_in1",
+          "microblaze_mcs_0/Clk"
+        ]
+      }
+    }
+  }
+}

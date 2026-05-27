@@ -1,0 +1,4 @@
+domain_path: /home/sasarmandarius/Desktop/LabCA/project_bonus_firmware/firmware/export/firmware/sw/standalone_microblaze_mcs_0_microblaze_I
+app_src_dir: /home/sasarmandarius/Vivado/2025.2/Vitis/data/embeddedsw/lib/sw_apps/hello_world
+template: hello_world
+lang: c
